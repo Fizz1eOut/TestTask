@@ -20,10 +20,10 @@ const close = () => {
 <template>
   <Teleport to="body">
     <Transition>
-      <div v-if="modelValue" class="modal">
+      <div v-if="props.modelValue" class="modal">
         <div class="overlay" @click.self="close">
           <div class="content">
-              <modal-header @close="close" />
+              <modal-header :title="'Мой заголовок'" @close="close" />
               <div class="content__body">
                 <slot />
               </div>
@@ -55,7 +55,9 @@ const close = () => {
   .content {
     border-radius: 10px;
     background: #eef5fc;
-    max-width: 470px;
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
   }
   .title {
     color: var(--color-black);
