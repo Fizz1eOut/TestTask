@@ -3,6 +3,10 @@ import { ref } from 'vue';
 import CallbackModal from '@/components/Content/CallbackModal.vue';
 
 const active = ref(false);
+
+const onFolderSelect = (folderId: number) => {
+  console.log('Выбранная папка:', folderId);
+};
 </script>
 
 <template>
@@ -11,7 +15,7 @@ const active = ref(false);
       Открыть
     </button>
 
-    <callback-modal v-model="active" />
+    <callback-modal v-model="active" @select="onFolderSelect" />
   </div>
 </template>
 
