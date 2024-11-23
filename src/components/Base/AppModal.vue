@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {  defineEmits } from 'vue';
+import { defineEmits } from 'vue';
 import ModalHeader from '@/components/Content/ModalHeader.vue';
 
 const props = defineProps({
